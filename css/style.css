@@ -346,3 +346,52 @@ body{
     }
 }
 
+@media (max-width:426px){
+
+    .container-2{
+        height: 330vh;
+    }
+
+    .container-2 h5{
+        margin-bottom: 100px;
+    }
+    .separate-1{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .separate-1 p{
+        font-size: 12px;
+    }
+
+    .separate-2 p{
+        font-size: 12px;
+    }
+    .separate-2{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-3{
+        margin-top: -80px;
+        background: 
+        url('../assets/img/publi425.png');
+    }
+    .container-6{
+        background: 
+        url('../assets/img/vid425.gif');
+    }
+
+    .map-responsive iframe{
+        height: 450px;
+        padding: 70px;
+    }
+    .container-7{
+        margin-bottom: -100px;
+    }
+}

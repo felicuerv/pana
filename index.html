@@ -19,7 +19,7 @@
 <body>
   <header>
     <div class="navbar-container">
-        <nav id = "navbar" class="navbar navbar-expand-lg bg-body-tertiary ">
+        <nav id = "navbar" class="navbar navbar-expand-lg bg-color transparent ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#top"><img src="./assets/img/Logo.png" alt="" width="150" height="100"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
                             <a class="nav-link" href="#portfolio">Productos</a>
                         </li>
                         <li class="nav-item">
-                                <a href="https://wa.link/7t6osh" class="btn btn-outline-danger">Cómenos ahora</a>
+                                <a href="https://wa.link/7t6osh" class="btn btn-danger">Cómenos ahora</a>
                         </li>
                     </ul>
                 </div>
@@ -47,13 +47,13 @@
   </header>
     <div id="carrusel">
       <div class="container-carousel">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="max-width: 1200px; margin: 0 auto; max-height: auto;">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="max-width: 100%; margin: 0 auto; max-height: auto;">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="5000">
                 <img src="./assets/img/Post instagram.png" class="d-block w-100" alt="Donas de Panaderia Escondrijo">
                 <div class="carousel-caption d-md-block">
                     <a href="https://wa.link/7t6osh">
-                      <button class="btn btn-outline-danger btn-lg">Cómenos</button>
+                      <button class="btn btn-danger btn-lg">Cómenos</button>
                     </a>
                 </div>
               </div>
@@ -61,7 +61,7 @@
                 <img src="./assets/img/banner2.png" class="d-block w-100" alt="Churros de Panaderia Escondrijo">
                 <div class="carousel-caption d-md-block">
                     <a href="https://wa.link/7t6osh">
-                      <button class="btn btn-outline-danger btn-lg">Saboreanos</button>
+                      <button class="btn btn-danger btn-lg">Saboreanos</button>
                     </a>
                   </div>
               </div>
@@ -69,7 +69,7 @@
                 <img src="./assets/img/criollitos.png" class="d-block w-100" alt="Criollitos de Panaderia Escondrijo">
                 <div class="carousel-caption d-md-block">
                     <a href="https://wa.link/7t6osh">
-                      <button class="btn btn-outline-danger btn-lg">Disfrútanos</button>
+                      <button class="btn btn-danger btn-lg">Disfrútanos</button>
                     </a>
                   </div>
               </div>
@@ -94,7 +94,7 @@
       </div>
       <div class="separate-2" data-aos="fade-right">
         <p>En el crisol del tiempo, nuestros hornos a leña, venerables guardianes de la tradición, dotan a nuestros panes del sabor inigualable de la autenticidad. Con una cocción lenta y cuidadosa, cada bocado es una celebración de la artesanía y el legado culinario, impregnado del aroma reconfortante de siglos de sabiduría gastronómica.</p>
-        <img src="./assets/img/horno.jpg" alt="Foto de hornos de Panaderia Escondrijo" width="500" height="500">
+        <img src="./assets/img/horno.jpg" alt="Foto de hornos de Panaderia Escondrijo" width="500" height="500" style="padding: 40px;">
       </div>
       <div class="separate-1" data-aos="fade-left">
         <p>Desde su fundación en 1960, "El Escondrijo" se ha mantenido firme en su ubicación original y en sus recetas tradicionales. A pesar de los cambios en el mundo culinario, nuestra panadería sigue siendo un referente en la competencia. Nuestro compromiso con la calidad y la autenticidad nos ha mantenido en la cima, demostrando que lo clásico nunca pasa de moda. Cada producto que sale de nuestro horno es un tributo a nuestra historia y un recordatorio de que, en "El Escondrijo", la excelencia perdura..</p>
@@ -204,6 +204,11 @@
                 // Scroll Up
                 navbar.classList.remove("hidden");
                 navbar.classList.add("visible");
+                if (currentScroll <= lastScrollTop && currentScroll > navbarHeight) {
+                navbar.style.backgroundColor = "white"; // Cambiar el fondo a blanco solo cuando se hace scroll hacia arriba y estamos en la parte superior de la página
+            } else {
+                navbar.style.backgroundColor = ""; // Restaurar el fondo predeterminado en otros casos
+            }
             }
             lastScrollTop = currentScroll;
         });

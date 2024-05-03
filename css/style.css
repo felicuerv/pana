@@ -331,6 +331,10 @@ body{
 }
 
 @media (max-width:632px){
+    .navbar-brand img{
+        width: 100px;
+        height: 50px;
+    }
     .separate-1 p{
         font-size: 8px;
     }
@@ -394,6 +398,13 @@ body{
     }
     .container-7{
         margin-bottom: -100px;
+    }
+}
+
+@media (max-width: 390px){
+    .container-6{
+        background: 
+        url('../assets/img/vid380.gif');
     }
 }
 

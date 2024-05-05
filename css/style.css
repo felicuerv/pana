@@ -15,6 +15,11 @@ body{
     width: 100%;
 }
 
+.container-fluid {
+    overflow-x: hidden;
+}
+
+
 #navbar.hidden {
     transform: translateY(-100%);
 }
@@ -106,7 +111,7 @@ body{
 
 .container-3{
     background: 
-    url('../assets/img/publi.png');
+    url('../assets/img/publi.avif');
     background-size: cover;
     background-position: center;
     border-color: #000;
@@ -122,7 +127,7 @@ body{
 
 .container-4{
     background: 
-    url('../assets/img/banner2.png');
+    url('../assets/img/banner2.avif');
     background-size: cover;
     background-position: center;
     border-color: #000;
@@ -222,11 +227,20 @@ body{
     background: #E4E2DD;
 }
 
-.container-6{
-    background: 
-    url('../assets/img/vid.gif');
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
     background-size: cover;
-    background-position: center;
+  }
+
+
+.container-6{
     border-color: #000;
     border-width: 20px;
     margin-bottom: 10vh;
@@ -293,11 +307,11 @@ body{
     .container-3{
         margin-top: 100px;
         background: 
-        url('../assets/img/publi1024.png');
+        url('../assets/img/publi1024.avif');
     }
     .container-6{
         background: 
-        url('../assets/img/vid1024.gif');
+        url('../assets/img/vid1024.mp4');
     }
 }
 
@@ -305,11 +319,11 @@ body{
     .container-3{
         margin-top: 100px;
         background: 
-        url('../assets/img/publi768.png');
+        url('../assets/img/publi768.avif');
     }
     .container-6{
         background: 
-        url('../assets/img/vid768.gif');
+        url('../assets/img/vid768.mp4');
     }
     .container-2{
         height: 300vh;
@@ -388,11 +402,11 @@ body{
     .container-3{
         margin-top: -80px;
         background: 
-        url('../assets/img/publi425.png');
+        url('../assets/img/publi425.avif');
     }
     .container-6{
         background: 
-        url('../assets/img/vid425.gif');
+        url('../assets/img/vid425.mp4');
     }
 
     .map-responsive iframe{
@@ -407,7 +421,7 @@ body{
 @media (max-width: 390px){
     .container-6{
         background: 
-        url('../assets/img/vid380.gif');
+        url('../assets/img/vid380.mp4');
     }
 }
 
@@ -422,11 +436,11 @@ body{
     .container-3{
         margin-top: -80px;
         background: 
-        url('../assets/img/publi375.png');
+        url('../assets/img/publi375.avif');
     }
     .container-6{
         background: 
-        url('../assets/img/vid375.gif');
+        url('../assets/img/vid375.mp4');
     }
 
     .map-responsive iframe {
